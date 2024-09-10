@@ -6,12 +6,11 @@ int main() {
     std::cout << "Введите день: ";
     std::cin >> days;
 
-    if (days >= 1 && days <= 10 && days >= 13 && days <= 14 && days >= 20 && days <= 21 && days >= 27 && days <= 28) {
-        std::cout << "Данный день выходной.";
-    }else if (days >= 13 && days <= 14 || days >= 20 && days <= 21 || days >= 27 && days <= 28) {
-        std::cout << "Данный день выходной.";
-    }else {
-        std::cout << "Данный день не выходной";
+    if ((days >= 1 && days <= 5) || (days >= 8 && days <= 10) || (days % 7 == 6 || days % 7 == 0)) {
+    std::cout << "Данный день выходной.\n";
+    } else {
+    std::cout << "Данный день рабочий.\n";
     }
+    
     return 0;
 }
